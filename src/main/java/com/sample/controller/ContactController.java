@@ -28,17 +28,11 @@ public class ContactController {
 	@RequestMapping(value = "/contacts", method = RequestMethod.GET)
 	public ModelAndView contacts(HttpServletRequest request, HttpServletResponse response, Map<String, Object> model) throws JsonParseException, JsonMappingException, MalformedURLException, IOException, RestClientException, URISyntaxException {
 		
+		// Is necessary to exeute cause there're problems with java 1.7
 		System.setProperty("jsse.enableSNIExtension", "false");
-//		List<Contact> contacts = (List<Contact>) resttample.getForObject(new URI("https://solstice.applauncher.com/external/contacts.json"), Contact.class);
-//		System.out.println("JSON: " + contacts);
-		
+
 		ObjectMapper mapper = new ObjectMapper();
-		
-		List<Contact> contacts = (List<Contact>) mapper.readValue(new URL("https://solstice.applauncher.com/external/contacts.json"), Contact.class);
-//		Map<String,Object> map = mapper.readValue(new URL("https://solstice.applauncher.com/external/contacts.json"), Map.class);		
-		Map<String,String> result = mapper.readValue(new URL("https://solstice.applauncher.com/external/contacts.json"), new TypeReference<Map<String,String>>() { });
-		// just for test the response.
-//		System.out.println("Json: " + map);
+		List<Contact> contacts = mapper.readValue(new URL("https://solstice.applauncher.com/external/contacts.json"), new TypeReference<List<Contact>>(){});
 		System.out.println("JSON: " + contacts);
 		return new ModelAndView("contacts");
 	}
