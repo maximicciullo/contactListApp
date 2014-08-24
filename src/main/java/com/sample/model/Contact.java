@@ -11,7 +11,6 @@ public class Contact {
 	private String detailsURL;
 	private String smallImageURL;
 	private Date birthdate;
-	private List<String> phone;
 	
 	
 	public String getName() {
@@ -49,12 +48,6 @@ public class Contact {
 	}
 	public void setBirthdate(Date birthdate) {
 		this.birthdate = birthdate;
-	}
-	public List<String> getPhone() {
-		return phone;
-	}
-	public void setPhone(List<String> phone) {
-		this.phone = phone;
 	}
 	
 }
