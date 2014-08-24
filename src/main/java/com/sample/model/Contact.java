@@ -1,6 +1,5 @@
 package com.sample.model;
 
-import java.util.Date;
 
 public class Contact {
 	
@@ -9,8 +8,8 @@ public class Contact {
 	private String company;
 	private String detailsURL;
 	private String smallImageURL;
-	private Date birthdate;
-	private Phone phones;
+	private String birthdate;
+	private Phone phone;
 	
 	
 	public String getName() {
@@ -43,16 +42,17 @@ public class Contact {
 	public void setSmallImageURL(String smallImageURL) {
 		this.smallImageURL = smallImageURL;
 	}
-	public Date getBirthdate() {
+	public Phone getPhone() {
+		return phone;
+	}
+	public void setPhone(Phone phone) {
+		this.phone = phone;
+	}
+	public String getBirthdate() {
 		return birthdate;
 	}
-	public void setBirthdate(Date birthdate) {
+	public void setBirthdate(String birthdate) {
 		this.birthdate = birthdate;
 	}
-	public Phone getPhones() {
-		return phones;
-	}
-	public void setPhones(Phone phones) {
-		this.phones = phones;
-	}
+	
 }
