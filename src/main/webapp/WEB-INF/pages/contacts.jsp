@@ -87,7 +87,7 @@ $(document).on("pagebeforeshow", "#details-page", function () {
     var info_view = "";
     //use for..in to iterate through object
     
-    info_view += '<div class="ui-grid-a"><div class="ui-block-a"><div class="ui-bar field" style="font-weight : bold; text-align: left;"><img src="' + info.smallImageURL + '" class="ui-li-thumb"></div><div><h3>Phones</h3></div><div><h4>Work</h4>: ' + info.phone.work +'</div><div><h4>Home</h4><div><div> ' + info.phone.home +'<div><div><h4>Mobile</h4><div><div> ' + info.phone.mobile +'</div><div><h3>Address</h3></div><div> ' + info.phone.work +'</div></div><div class="ui-block-b"><div><h3>Name</h3></div><div> ' + info.name +'</div><div><h3>Company</h3></div><div> ' + info.company +' </div></div></div>';
+    info_view += '<div class="ui-grid-a"><div class="ui-block-a"><div class="ui-bar field" style="font-weight : bold; text-align: left;"><img src="' + info.smallImageURL + '" class="ui-li-thumb"></div><div><h3>Phones</h3></div><div><h4>Work</h4>' + info.phone.work +'</div><div><h4>Home</h4><div><div> ' + info.phone.home +'<div><div><h4>Mobile</h4><div><div> ' + info.phone.mobile +'</div><div><h3>Address</h3></div><div> ' + info.phone.work +'</div></div><div class="ui-block-b"><div><h3>Name</h3></div><div> ' + info.name +'</div><div><h3>Company</h3></div><div> ' + info.company +' </div></div></div>';
     //add this to html
     $(this).find("[data-role=content]").html(info_view);
 });

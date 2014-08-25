@@ -45,11 +45,4 @@ public class ContactController {
 		
 		return new ModelAndView("contacts", "model", myModel);
 	}
-	
-	@RequestMapping(value="/contacts", method = RequestMethod.GET)
-	public ModelAndView contactId(HttpServletRequest request, HttpServletResponse response, Map<String, Object> model) {
-		
-		return new ModelAndView("contacts");
-
-	}
 }
