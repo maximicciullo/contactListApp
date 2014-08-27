@@ -5,3 +5,4 @@
 /bin
 /src/main/webapp/css/.sass-cache
 /src/main/webapp/css/*.css
+/src/main/target
